@@ -5,76 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anwesha Manna | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4a3b1f73a2.js" crossorigin="anonymous"></script>
   <style>
     * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
 
-    body {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color:white;
-    }
+    body { background: linear-gradient(135deg, #0f172a, #1e293b); color:white; }
 
-    header {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:20px 50px;
-      background:rgba(2,6,23,0.8);
-      backdrop-filter: blur(10px);
-      position:sticky;
-      top:0;
-    }
+    header { display:flex; justify-content:space-between; align-items:center; padding:20px 50px; background:rgba(2,6,23,0.8); backdrop-filter: blur(10px); position:sticky; top:0; }
 
     header h1 { color:#38bdf8; }
 
-    nav a {
-      margin-left:20px;
-      text-decoration:none;
-      color:white;
-      transition:0.3s;
-    }
-
+    nav a { margin-left:20px; text-decoration:none; color:white; transition:0.3s; }
     nav a:hover { color:#38bdf8; }
 
-    .hero {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:80px 50px;
-      flex-wrap:wrap;
-    }
+    .hero { display:flex; justify-content:space-between; align-items:center; padding:80px 50px; flex-wrap:wrap; }
 
-    .hero-text {
-      max-width:500px;
-      animation: fadeInUp 1s ease;
-    }
-
-    .hero-text h2 {
-      font-size:42px;
-    }
-
+    .hero-text { max-width:500px; animation: fadeInUp 1s ease; }
+    .hero-text h2 { font-size:42px; }
     .hero-text span { color:#38bdf8; }
 
-    .hero-text p { margin-top:10px; }
-
-    .btn {
-      margin-top:20px;
-      padding:12px 25px;
-      border:none;
-      background:#38bdf8;
-      color:black;
-      cursor:pointer;
-      border-radius:8px;
-      transition:0.3s;
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-      background:#0ea5e9;
-    }
-
-    .hero-img {
-      animation: fadeIn 2s ease;
-    }
+    .icons { margin-top:20px; }
+    .icons a { margin-right:15px; color:white; font-size:20px; transition:0.3s; }
+    .icons a:hover { color:#38bdf8; transform: scale(1.2); }
 
     .hero-img img {
       width:250px;
@@ -83,58 +35,22 @@
       border-radius:50%;
       border:4px solid #38bdf8;
       box-shadow:0 0 30px rgba(56,189,248,0.5);
+      display:block;
     }
 
-    .section {
-      padding:60px 50px;
-    }
+    .section { padding:60px 50px; }
+    .section h2 { margin-bottom:30px; text-align:center; }
 
-    .section h2 {
-      margin-bottom:30px;
-      text-align:center;
-    }
+    .skills { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
 
-    .skills {
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-      gap:20px;
-    }
+    .card { background:rgba(30,41,59,0.8); padding:20px; border-radius:15px; transition:0.3s; backdrop-filter: blur(10px); animation: fadeInUp 1s ease; }
+    .card:hover { transform: translateY(-10px) scale(1.03); box-shadow:0 10px 30px rgba(0,0,0,0.3); }
 
-    .card {
-      background:rgba(30,41,59,0.8);
-      padding:20px;
-      border-radius:15px;
-      transition:0.3s;
-      backdrop-filter: blur(10px);
-      animation: fadeInUp 1s ease;
-    }
+    footer { text-align:center; padding:20px; background:#020617; margin-top:40px; }
 
-    .card:hover {
-      transform: translateY(-10px) scale(1.03);
-      box-shadow:0 10px 30px rgba(0,0,0,0.3);
-    }
+    @keyframes fadeInUp { from { opacity:0; transform: translateY(30px); } to { opacity:1; transform: translateY(0); } }
 
-    footer {
-      text-align:center;
-      padding:20px;
-      background:#020617;
-      margin-top:40px;
-    }
-
-    @keyframes fadeInUp {
-      from { opacity:0; transform: translateY(30px); }
-      to { opacity:1; transform: translateY(0); }
-    }
-
-    @keyframes fadeIn {
-      from { opacity:0; }
-      to { opacity:1; }
-    }
-
-    @media(max-width:768px) {
-      .hero { flex-direction:column; text-align:center; }
-      .hero-img { margin-top:30px; }
-    }
+    @media(max-width:768px) { .hero { flex-direction:column; text-align:center; } .hero-img { margin-top:30px; } }
   </style>
 </head>
 <body>
@@ -152,11 +68,17 @@
   <div class="hero-text">
     <h2>Hello, I'm <span>Anwesha</span></h2>
     <p>Creative enthusiast skilled in content creation, editing, and frontend development.</p>
-  
+
+    <div class="icons">
+      <a href="tel:9707836715"><i class="fas fa-phone"></i></a>
+      <a href="mailto:anweshamanna87@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/anwesha-15a834351/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/twexx13" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
   </div>
 
   <div class="hero-img">
-    <img src="your-photo.jpg" alt="Anwesha Photo">
+    <img src="photo.jpg" alt="Anwesha Photo">
   </div>
 </section>
 
@@ -176,25 +98,10 @@
 <section class="section" id="contact">
   <h2>Contact Me</h2>
   <div class="skills">
-    <div class="card">
-      <h3>📞 Phone</h3>
-      <p>9707836715</p>
-    </div>
-
-    <div class="card">
-      <h3>📧 Email</h3>
-      <p><a href="mailto:anweshamanna87@gmail.com" style="color:#38bdf8;">anweshamanna87@gmail.com</a></p>
-    </div>
-
-    <div class="card">
-      <h3>💼 LinkedIn</h3>
-      <p><a href="https://www.linkedin.com/in/anwesha-15a834351/" target="_blank" style="color:#38bdf8;">View Profile</a></p>
-    </div>
-
-    <div class="card">
-      <h3>💻 GitHub</h3>
-      <p><a href="https://github.com/twexx13" target="_blank" style="color:#38bdf8;">twexx13</a></p>
-    </div>
+    <div class="card"><h3>📞 Phone</h3><p>9707836715</p></div>
+    <div class="card"><h3>📧 Email</h3><p><a href="mailto:anweshamanna87@gmail.com" style="color:#38bdf8;">anweshamanna87@gmail.com</a></p></div>
+    <div class="card"><h3>💼 LinkedIn</h3><p><a href="https://www.linkedin.com/in/anwesha-15a834351/" target="_blank" style="color:#38bdf8;">View Profile</a></p></div>
+    <div class="card"><h3>💻 GitHub</h3><p><a href="https://github.com/twexx13" target="_blank" style="color:#38bdf8;">twexx13</a></p></div>
   </div>
 </section>
 
